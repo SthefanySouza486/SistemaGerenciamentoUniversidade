@@ -1,4 +1,5 @@
 **API de Gerenciamento Universitário**
+
 **📝 Descrição do Projeto**
 Este projeto consiste em uma API RESTful desenvolvida em Spring Boot como parte de uma atividade de fixação de conhecimento. O objetivo é criar um sistema de gerenciamento para uma universidade, permitindo o controle de professores, estudantes, cursos, escritórios e matrículas. A aplicação foi desenhada para ser robusta, escalável e seguir as melhores práticas de desenvolvimento de APIs.
 
@@ -82,7 +83,8 @@ Durante a execução, você pode acessar o console do banco de dados em memória
 **Endpoints da API**
 Abaixo está uma lista dos principais endpoints disponíveis na API.
 
-**PARA COLOCAR**
+![image](https://github.com/user-attachments/assets/5a4a5ee4-6161-481c-b95e-a841cc286db4)
+
 
 
 **✒️ Autor**
