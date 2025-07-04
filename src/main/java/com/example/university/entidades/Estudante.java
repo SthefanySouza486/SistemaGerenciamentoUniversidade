@@ -1,10 +1,11 @@
 package com.example.university.entidades;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 import lombok.Data;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @Entity
@@ -14,6 +15,10 @@ public class Estudante {
     private Long id;
 
     private String nome;
+
+    @OneToMany(mappedBy = "estudante", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Set<Matricula> matriculas = new HashSet<>();
 
 
 }
