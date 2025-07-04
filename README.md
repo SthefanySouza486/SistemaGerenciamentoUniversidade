@@ -58,10 +58,10 @@ Apache Maven 3.6 ou superior.
 **▶️ Como Executar o Projeto**
 
 1. Clone o repositório:
-git clone https://seu-link-para-o-repositorio.git
+git clone https://github.com/SthefanySouza486/SistemaGerenciamentoUniversidade/tree/main
 
 2. Navegue até o diretório do projeto:
-cd nome-do-projeto
+cd SistemaGerenciamentoUniversidade
 
 3. Execute a aplicação com o Maven:
 mvn spring-boot:run
