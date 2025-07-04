@@ -1,5 +1,6 @@
 package com.example.university.entidades;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -19,4 +20,16 @@ public class Professor {
     private String email;
 
     private LocalDate dataContratacao;
+
+    @OneToOne(mappedBy = "professor", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonManagedReference
+    private Escritorio escritorio;
+
+    public void setEscritorio(Escritorio escritorio){
+        if(escritorio != null){
+            escritorio.setProfessor(this);
+        }
+        this.escritorio = escritorio;
+    }
+
 }
