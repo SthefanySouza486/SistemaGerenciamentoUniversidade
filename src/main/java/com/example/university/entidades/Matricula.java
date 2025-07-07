@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 public class Matricula {
 
     @EmbeddedId
-    private IdComposto id = new IdComposto();
+    private IdMatricula id = new IdMatricula();
 
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("studentsId")
