@@ -1,4 +1,4 @@
-package com.example.university.config;
+package com.example.university.Config;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.HttpStatus;

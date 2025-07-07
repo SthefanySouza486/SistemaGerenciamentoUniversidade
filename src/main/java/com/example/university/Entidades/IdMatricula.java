@@ -1,4 +1,4 @@
-package com.example.university.entidades;
+package com.example.university.Entidades;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
