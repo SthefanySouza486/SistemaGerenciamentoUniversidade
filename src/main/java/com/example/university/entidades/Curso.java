@@ -3,6 +3,7 @@ package com.example.university.entidades;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.math.BigDecimal;
 import java.util.HashSet;
@@ -10,6 +11,7 @@ import java.util.Set;
 
 @Data
 @Entity
+@EqualsAndHashCode(exclude = {"professores", "matriculas"})
 public class Curso {
 
     @Id
@@ -20,9 +22,13 @@ public class Curso {
 
     private BigDecimal valorMensalidade;
 
-    @OneToMany(mappedBy = "curso", CascadeType.ALL)
+    @OneToMany(mappedBy = "curso", cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Matricula> matriculas = new HashSet<>();
+
+    @ManyToMany(mappedBy = "curso", fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Set<Professor> professores = new HashSet<>();
 
 
 }
