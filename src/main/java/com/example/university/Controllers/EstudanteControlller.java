@@ -3,6 +3,7 @@ package com.example.university.Controllers;
 import com.example.university.DTOs.Estudante.EstudanteCreateForm;
 import com.example.university.DTOs.Estudante.EstudanteUpdateForm;
 import com.example.university.Entidades.Estudante;
+import com.example.university.Repository.EstudanteRepository;
 import com.example.university.Services.EstudanteService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -15,9 +16,11 @@ import java.util.List;
 @RequestMapping("/estudantes")
 public class EstudanteControlller {
     private final EstudanteService service;
+    private final EstudanteRepository repository;
 
-    public EstudanteControlller(EstudanteService service) {
+    public EstudanteControlller(EstudanteService service, EstudanteRepository repository) {
         this.service = service;
+        this.repository = repository;
     }
 
     @PostMapping
@@ -49,5 +52,24 @@ public class EstudanteControlller {
     @GetMapping("/nomes/uppercase")
     public ResponseEntity<List<String>> getAllEstudanteNomesUpperCase() {
         return ResponseEntity.ok(service.getAllEstudanteNomesUpperCase());
+    }
+
+    @GetMapping("/search/by-nome")
+    public ResponseEntity<Estudante> findByNome(@RequestParam String nome) {
+        return repository.findByNome(nome)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("/first")
+    public ResponseEntity<Estudante> findFirstByOrderByNomeAsc() {
+        return repository.findFirstByOrderByNomeAsc()
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("/order-desc")
+    public ResponseEntity<List<Estudante>> findFirstByOrderByNomeDesc() {
+        return ResponseEntity.ok(repository.findByOrderByNomeDesc());
     }
 }
