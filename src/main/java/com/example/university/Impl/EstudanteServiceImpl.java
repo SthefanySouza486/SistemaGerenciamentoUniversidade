@@ -14,11 +14,9 @@ import java.util.stream.Collectors;
 @Service
 public class EstudanteServiceImpl implements EstudanteService {
     private final EstudanteRepository repository;
-    private final EstudanteRepository estudanteRepository;
 
-    public EstudanteServiceImpl(EstudanteRepository repository, EstudanteRepository estudanteRepository) {
+    public EstudanteServiceImpl(EstudanteRepository repository) {
         this.repository = repository;
-        this.estudanteRepository = estudanteRepository;
     }
 
     @Override
@@ -50,7 +48,7 @@ public class EstudanteServiceImpl implements EstudanteService {
 
     @Override
     public void delete(Long id) {
-        if(!estudanteRepository.existsById(id)){
+        if(!repository.existsById(id)){
             throw new EntityNotFoundException("Estudante não encontrado com id " + id);
         }
         repository.deleteById(id);
