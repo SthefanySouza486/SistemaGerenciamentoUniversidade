@@ -87,7 +87,6 @@ Abaixo está uma lista dos principais endpoints disponíveis na API.
 
 
 
-
 **✒️ Autor**
 Projeto desenvolvido como parte de uma atividade de fixação.
 
