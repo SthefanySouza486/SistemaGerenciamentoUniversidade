@@ -49,42 +49,10 @@ O projeto foi desenvolvido para atender a uma lista específica de requisitos t�
 
 **Utilitários:** Lombok
 
-**⚙️ Pré-requisitos**
-Antes de começar, você vai precisar ter instalado em sua máquina:
-
-JDK 21 ou superior.
-
-Apache Maven 3.6 ou superior.
-
-**▶️ Como Executar o Projeto**
-
-1. Clone o repositório:
-git clone https://github.com/SthefanySouza486/SistemaGerenciamentoUniversidade/tree/main
-
-2. Navegue até o diretório do projeto:
-cd SistemaGerenciamentoUniversidade
-
-3. Execute a aplicação com o Maven:
-mvn spring-boot:run
-
-4. A aplicação estará disponível em http://localhost:8080.
-
-**🗄️ Acesso ao Banco de Dados H2**
-Durante a execução, você pode acessar o console do banco de dados em memória para visualizar as tabelas e os dados.
-
-**URL do Console:** http://localhost:8080/h2-console
-
-**JDBC URL:** jdbc:h2:mem:sistemaUniversidade
-
-**Username:** sa
-
-**Password:** 
-
 **Endpoints da API**
 Abaixo está uma lista dos principais endpoints disponíveis na API.
 
 ![Design sem nome](https://github.com/user-attachments/assets/ae5ba5f6-8157-47c2-a10d-b6d918a5e672)
-
 
 
 **✒️ Autor**
