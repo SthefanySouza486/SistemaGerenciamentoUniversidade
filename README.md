@@ -83,7 +83,7 @@ Durante a execução, você pode acessar o console do banco de dados em memória
 **Endpoints da API**
 Abaixo está uma lista dos principais endpoints disponíveis na API.
 
-![image](https://github.com/user-attachments/assets/e1f1e97c-d762-4ff3-b5d4-50c04dde4fd5)
+![Design sem nome](https://github.com/user-attachments/assets/ae5ba5f6-8157-47c2-a10d-b6d918a5e672)
 
 
 
